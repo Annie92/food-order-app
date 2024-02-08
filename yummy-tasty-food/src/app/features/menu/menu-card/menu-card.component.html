@@ -1,0 +1,10 @@
+<div class="card" style="width: 18rem;" *ngFor="let menu of menuItem">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body" *ngFor="let item of menu.menuItems">
+      <ng-content></ng-content>
+      <h5 class="card-title">{{item.name}}</h5>
+      <p class="card-text">Made with belgium chocolate.</p>
+      <button  class="btn btn-primary" (click)="addToCart(item.name)">Add to cart</button>
+    </div>
+    <ng-content></ng-content>
+  </div>

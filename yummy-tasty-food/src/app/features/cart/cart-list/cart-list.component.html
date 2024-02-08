@@ -1,0 +1,9 @@
+<p>cart-list works!</p>
+
+<!-- <app-menu-list></app-menu-list> -->
+<app-menu-card 
+    [menuItem]="selectedMenu"
+    (selectMenu)="onSelectMenu($event)" >
+    <p>this content will be projected</p>
+</app-menu-card>
+
