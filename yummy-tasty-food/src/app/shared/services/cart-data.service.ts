@@ -8,6 +8,8 @@ export class CartDataService {
   private itemInCart = new BehaviorSubject<number>(0);
   cartItems = this.itemInCart.asObservable();
   
+  selectedMenu: any;
+
   constructor() { 
     
   }

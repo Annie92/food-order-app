@@ -1,9 +1,7 @@
-<p>cart-list works!</p>
 
-<!-- <app-menu-list></app-menu-list> -->
 <app-menu-card 
     [menuItem]="selectedMenu"
     (selectMenu)="onSelectMenu($event)" >
-    <p>this content will be projected</p>
+    <ng-container class="projected">this content will be projected</ng-container>
 </app-menu-card>
 

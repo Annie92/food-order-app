@@ -1,10 +1,18 @@
-<div class="card" style="width: 18rem;" *ngFor="let menu of menuItem">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body" *ngFor="let item of menu.menuItems">
-      <ng-content></ng-content>
+<div class="container">
+<div class="row" *ngFor="let menu of menuItem">
+  <div class="card col-3 gutter" *ngFor="let item of menu.menuItems">
+    <img src="../../../../assets/images/{{item.src}}" class="card-img-top" alt="...">
+    <div class="card-body">
       <h5 class="card-title">{{item.name}}</h5>
-      <p class="card-text">Made with belgium chocolate.</p>
+      <p class="card-text">{{item.description}}</p>
       <button  class="btn btn-primary" (click)="addToCart(item.name)">Add to cart</button>
     </div>
-    <ng-content></ng-content>
+    <app-favourite 
+      [likeCount]="item.likesCount"
+      [isFav]="item.isFavorite">
+    </app-favourite>
+    <ng-content select=".projected"></ng-content>
   </div>
+</div>
+</div>
+
